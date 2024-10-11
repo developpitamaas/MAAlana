@@ -1,3 +1,8 @@
-node_modules
-# .env
-.vercel
+# Ignore node_modules directory
+node_modules/
+
+# Ignore environment variable files
+.env
+
+# Ignore Vercel deployment directory (if present)
+.vercel/

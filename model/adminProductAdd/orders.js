@@ -7,12 +7,19 @@ const orderSchema = new mongoose.Schema({
         ref: 'User', // Reference to a User model
         required: true
     },
+    userName: {
+        type: String,
+    },
 
     cartItems: [
         {
             product: {
                 type: mongoose.Schema.Types.ObjectId,
                 ref: 'Product', // Reference to a Product model
+                required: true
+            },
+            image: {
+                type: String,
                 required: true
             },
             name: {

@@ -41,5 +41,23 @@ router.post('/send-order-details-email', productController.sendEmail);
 // update the order status
 router.put('/update-order-status/:id', productController.updateOrderStatus);
 
+// coupon
+router.post('/generate-coupon', productController.generateCoupon);
+
+// apply coupon
+router.post('/apply-coupon', productController.applyCoupon);
+
+//payment verification
+router.post('/payment-verification', productController.verifyRazorpayPayment);
+
+// route to create order online payment
+router.post('/create-order-online', productController.createOrderOnline);
+
+// route to get orders by user id
+router.get('/get-orders-by-user-id/:userId', productController.getOrderByUserId);
+
+// route to get order details by order number
+router.get('/get-order-details-by-order-number/:orderNumber', productController.getOrderDetailsByOrderNumber);
+
 // exports
 module.exports = router;
